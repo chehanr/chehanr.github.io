@@ -1,0 +1,33 @@
+---
+layout: page
+---
+
+<article>
+    <h2 class="post-title">{{ page.title }}</h2>
+
+    {% if page.image %}
+    <img class="post-title-image" src="{{ page.image }}" alt="{{ page.title }}">
+    {% endif %}
+
+    <span class="post-date">
+        <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
+    </span>
+
+    {% if page.author %}
+    <span class="post-author">by {{ page.author }}</span>
+    {% endif %}
+
+    {% if page.tags != empty %}
+    <br />
+    <span class="post-tags">
+        {% for tag in page.tags %}
+        <a href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+    </span>
+    {% endif %}
+
+    {{ content }}
+</article>
+{% if site.disqus and page.comments %}
+{% include disqus.html %}
+{% endif %}
