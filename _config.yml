@@ -17,6 +17,8 @@ spotify:  22ipl2w2udlk4kcuary6xdeka
 lastfm:  chehanr
 disqus: chehanr
 
+google_analytics: "UA-56774080-3"
+
 collections:
   projects:
     output: true
