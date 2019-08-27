@@ -2,7 +2,6 @@
 title: Chehan Ratnasiri
 keywords: chehanr,blog,web,site
 description: My personal webspace.
-baseurl: ""
 url: "https://chehanr.xyz"
 # Posts
 permalink: /post/:year/:month/:day/:title/
