@@ -3,14 +3,14 @@ layout: page
 ---
 
 <article>
-    <h2 class="post-title">{{ page.title }}</h2>
-
     {% if page.image %}
-    <img class="post-title-image" src="{{ page.image }}" alt="{{ page.title }}">
+    <img class="post-header-image" src="{{ page.image }}" alt="{{ page.title }}">
     {% endif %}
 
+    <h2 class="post-title">{{ page.title }}</h2>
+
     <span class="post-date">
-        <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
+        <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A %B %d, %Y" }}</time>
     </span>
 
     {% if page.author %}
