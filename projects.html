@@ -6,14 +6,14 @@ nav_item: projects
 ---
 
 <section>
-	<h2>Projects</h2>
-	{% if site.projects != empty %}
-	<ul id="post-list">
-		{% for project in site.projects %}
-		<li><a href="{{ project.url }}">{{ project.title }}</a></li>
-		{% endfor %}
-	</ul>
-	{% else %}
-	<p>No projects found!</p>
-	{% endif %}
+  <h2>Projects</h2>
+  {% if site.projects != empty %}
+  <ul id="post-list">
+    {% for project in site.projects %}
+    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No projects yet.</p>
+  {% endif %}
 </section>

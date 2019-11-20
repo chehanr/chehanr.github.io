@@ -1,22 +1,23 @@
-# Site settings
 title: Chehan Ratnasiri
-keywords: chehanr,blog,web,site
+keywords: chehanr, blog, web, site
 description: My personal webspace.
-url: "https://chehanr.xyz"
-# Posts
-permalink: /post/:year/:month/:day/:title/
 
+baseurl: ""
+url: "https://chehanr.xyz"
+
+# Vars
 name: Chehan Ratnasiri
 email: chehan.rat@gmail.com
-github:  chehanr
-linkedin:  chehanr
-twitter: chehanr
-instagram:  chehanr
-spotify:  22ipl2w2udlk4kcuary6xdeka
-lastfm:  chehanr
+github: chehanr
+linkedin: chehanr
+twitter:
+  username: chehanr
+  card: summary
+instagram: chehanr
+spotify: 22ipl2w2udlk4kcuary6xdeka
+lastfm: chehanr
 disqus: chehanr
-
-google_analytics: "UA-56774080-3"
+google_analytics: UA-56774080-3
 
 collections:
   projects:
@@ -24,19 +25,23 @@ collections:
     permalink: /:collection/:title/
 
 # Build settings
+environment: production
+permalink: /post/:year/:month/:day/:title/
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - jekyll-sitemap
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .vscode/
+  - "*.code-workspace"
