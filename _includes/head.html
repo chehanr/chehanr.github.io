@@ -5,9 +5,12 @@
   <meta name="author" content="{{ site.name }}">
   <meta name="keywords" content="{{ site.keywords }}">
   {% seo %}
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+  <script src="{{ '/assets/js/theme.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/dark.css' | prepend: site.baseurl }}" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="{{ '/assets/css/light.css' | prepend: site.baseurl }}" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
   {% include favicon.html %}
   {% if jekyll.environment == "production" %}
   {% include analytics.html %} 

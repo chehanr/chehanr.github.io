@@ -2,8 +2,23 @@
 
 /* global */
 
+:root {
+  --link-color: #0366d6;
+}
+
 body {
   font-family: "Roboto Slab", serif;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .grid-container {
@@ -92,7 +107,7 @@ body {
 }
 
 .nav-list > li a {
-  color: #000;
+  color: var(--color);
   display: block;
 }
 /*  */
@@ -101,8 +116,8 @@ body {
 
 code,
 pre {
-  border: solid 1px #ddd;
-  background: #f1f1f1;
+  border: solid 1px var(--code-background-color);
+  background: var(--code-background-color);
   font-family: "Inconsolata", monospace;
   font-size: 0.8rem;
   margin-bottom: 30px;
