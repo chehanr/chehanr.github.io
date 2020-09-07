@@ -2,10 +2,6 @@
 
 /* global */
 
-:root {
-  --link-color: #0366d6;
-}
-
 body {
   font-family: "Roboto Slab", serif;
   background-color: var(--background-color);
