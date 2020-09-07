@@ -77,7 +77,12 @@ a:hover {
   .nav-list > li {
     display: block;
     padding-right: 20px;
+    padding-bottom: 20px;
     float: left;
+  }
+
+  .nav-list > li:last-child {
+    padding-bottom: 0;
   }
 }
 /*  */
