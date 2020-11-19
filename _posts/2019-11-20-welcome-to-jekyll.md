@@ -5,6 +5,7 @@ date:   2019-11-20 12:29:23 +1100
 categories: jekyll update
 comments: true
 image: https://images.unsplash.com/photo-1574174227799-c3697c71352a?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80
+published: false
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
