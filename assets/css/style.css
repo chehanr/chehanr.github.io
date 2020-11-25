@@ -162,6 +162,11 @@ pre code {
   padding: 0;
 }
 
+.post-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 .post-header-image {
   display: block;
   margin: auto;
