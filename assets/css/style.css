@@ -113,6 +113,30 @@ a:hover {
 }
 /*  */
 
+/* index.html */
+
+.link-list {
+  font-family: "Inconsolata", monospace;
+  list-style-type: none;
+  padding: 0;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.link-list > li {
+  display: block;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  float: left;
+}
+
+.link-list > li:last-child {
+  padding-bottom: 0;
+}
+
+/*  */
+
 /* post.html */
 
 code,
