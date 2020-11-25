@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<article>
+<article class="post-container">
     {% if page.image %}
     <img class="post-header-image" src="{{ page.image }}" alt="{{ page.title }}">
     {% endif %}
@@ -27,7 +27,10 @@ layout: page
     {% endif %}
 
     {{ content }}
+
+    <br />
+
+    {% if site.disqus and page.comments %}
+    {% include disqus.html %}
+    {% endif %}
 </article>
-{% if site.disqus and page.comments %}
-{% include disqus.html %}
-{% endif %}
