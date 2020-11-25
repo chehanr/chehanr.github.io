@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Inter&display=swap");
 
 /* global */
 
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background-color);
   color: var(--color);
 }
@@ -86,7 +86,6 @@ a:hover {
 /* index.html */
 
 .post-list {
-  font-family: "Inconsolata", monospace;
   list-style-type: none;
   padding: 0;
 }
@@ -100,7 +99,6 @@ a:hover {
 }
 
 .nav-list {
-  font-family: "Inconsolata", monospace;
   list-style-type: none;
   padding: 0;
   float: left;
@@ -116,7 +114,6 @@ a:hover {
 /* index.html */
 
 .link-list {
-  font-family: "Inconsolata", monospace;
   list-style-type: none;
   padding: 0;
   display: block;
@@ -143,7 +140,7 @@ code,
 pre {
   border: solid 1px var(--code-background-color);
   background: var(--code-background-color);
-  font-family: "Inconsolata", monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 0.8rem;
   margin-bottom: 30px;
 }
