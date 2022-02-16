@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>localhost:3000</id>
+    <title>Chehan Ratnasiri</title>
+    <updated>2022-02-16T10:22:57.803Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Chehan Ratnasiri</name>
+        <email>chehan.rat@gmail.com</email>
+        <uri>https://twitter.com/chehanr</uri>
+    </author>
+    <link rel="alternate" href="localhost:3000"/>
+    <link rel="self" href="localhost:3000/atom.xml"/>
+    <subtitle>Chehan's personal webspace</subtitle>
+    <logo>localhost:3000/face.png</logo>
+    <icon>localhost:3000/favicon.ico</icon>
+    <rights>All rights reserved 2022, Chehan Ratnasiri</rights>
+</feed>
