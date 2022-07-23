@@ -67,7 +67,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <link rel="me" href="mailto:chehan.rat@gmail.com" />
         <link rel="me" href="https://twitter.com/chehanr" />
         <link rel="me" href="https://github.com/chehanr" />
-        <link rel="canonical" href={baseUrl} />
+        <link rel="canonical" href={path.join(baseUrl, router.pathname)} />
         <link
           rel="alternate"
           href={path.join(baseUrl, "atom.xml")}
