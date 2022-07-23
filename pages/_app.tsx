@@ -25,7 +25,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <meta
           name="twitter:url"
           key="twitter:url"
-          content={path.join(baseUrl, router.pathname)}
+          content={path.join(baseUrl, router.asPath)}
         />
         <meta
           name="twitter:title"
@@ -46,7 +46,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <meta
           property="og:url"
           key="og:url"
-          content={path.join(baseUrl, router.pathname)}
+          content={path.join(baseUrl, router.asPath)}
         />
         <meta property="og:type" content="blog" />
         <meta property="og:title" key="og:title" content="Chehan Ratnasiri" />
@@ -67,7 +67,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <link rel="me" href="mailto:chehan.rat@gmail.com" />
         <link rel="me" href="https://twitter.com/chehanr" />
         <link rel="me" href="https://github.com/chehanr" />
-        <link rel="canonical" href={baseUrl} />
+        <link
+          rel="canonical"
+          href={path.join(baseUrl, router.asPath.split("?")[0])}
+        />
         <link
           rel="alternate"
           href={path.join(baseUrl, "atom.xml")}

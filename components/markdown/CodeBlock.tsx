@@ -5,11 +5,9 @@ import {
   SyntaxHighlighterProps,
 } from "react-syntax-highlighter";
 
-export const CodeBlock: FunctionComponent<SyntaxHighlighterProps> = ({
-  language,
-  children,
-  ...props
-}) => {
+export const CodeBlock: FunctionComponent<
+  Omit<SyntaxHighlighterProps, "style">
+> = ({ language, children, ...props }) => {
   return (
     <SyntaxHighlighter style={style} language={language} {...props}>
       {children}
