@@ -2,7 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
-import { SITE_TITLE, GOOGLE_ANALYTICS_TRACKING_CODE } from "../consts";
+import { SITE_TITLE, GOOGLE_TAG_MEASUREMENT_ID } from "../consts";
 
 export type Props = {
   pageTitle?: string;
@@ -22,6 +22,21 @@ const title = [SITE_TITLE, ...(pageTitle ? [pageTitle] : [])].join(" | ");
 ---
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    type="text/partytown"
+    src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_MEASUREMENT_ID}`}
+  ></script>
+  <script type="text/partytown" define:vars={{ GOOGLE_TAG_MEASUREMENT_ID }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", GOOGLE_TAG_MEASUREMENT_ID);
+  </script>
+
   <!-- Global Metadata -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -49,19 +64,4 @@ const title = [SITE_TITLE, ...(pageTitle ? [pageTitle] : [])].join(" | ");
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={image && new URL(image, Astro.url)} />
-
-  <!-- gtag -->
-  <script
-    type="text/partytown"
-    src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_TRACKING_CODE}`}
-  ></script>
-  <script type="text/partytown" define:vars={{ GOOGLE_ANALYTICS_TRACKING_CODE }}
-  >
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", GOOGLE_ANALYTICS_TRACKING_CODE);
-  </script>
 </head>
