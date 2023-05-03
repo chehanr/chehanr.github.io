@@ -1,3 +1,3 @@
 # chehanr.github.io
 
-AKA <chehanr.com>
+AKA <https://www.chehanr.com/>
