@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = "Chehan Ratnasiri";
 export const SITE_DESCRIPTION = "Chehan's personal webspace";
+export const GOOGLE_ANALYTICS_TRACKING_CODE = "UA-56774080-3";
