@@ -1,0 +1,19 @@
+---
+import { SITE_TITLE } from "../consts";
+
+export type Props = {
+  pageTitle?: string;
+};
+
+const { pageTitle } = Astro.props;
+---
+
+<header>
+  <div class="flex flex-row items-center gap-2">
+    <h1 class="flex-grow font-bold text-lg md:flex-none">
+      {SITE_TITLE}
+    </h1>
+    <h2 class="font-light hidden md:block md:flex-grow">{pageTitle}</h2>
+    <!-- TODO: Add theme switch button -->
+  </div>
+</header>

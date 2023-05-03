@@ -1,0 +1,70 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <section>
+    <span class="flex items-center gap-4">
+      <Image
+        src="https://www.gravatar.com/avatar/f3791ecaa641099539cd5a7d266163c6?s=48"
+        height={48}
+        width={48}
+        format="png"
+        alt="avatar"
+        class="rounded-full"
+      />
+      <p class="text-2xl">Hi! I&apos;m Chehan</p>
+    </span>
+
+    <p class="mt-4">
+      I&apos;m a software developer currently working at
+      <a
+        href="https://www.vcgs.org.au/"
+        target="_blank"
+        rel="noopener"
+        class="underline inline-block"
+      >
+        VCGS
+      </a>.
+    </p>
+
+    <p>
+      You can find me on:
+      <ul class="list-disc list-inside">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/chehanr/"
+            target="_blank"
+            rel="noopener"
+            class="underline"
+          >
+            LinkedIn
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://github.com/chehanr"
+            target="_blank"
+            rel="noopener"
+            class="underline"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/chehanr"
+            target="_blank"
+            rel="noopener"
+            class="underline"
+          >
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </p>
+  </section>
+</PageLayout>

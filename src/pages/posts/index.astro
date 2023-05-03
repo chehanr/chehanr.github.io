@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+
+import FormattedDate from "../../components/FormattedDate.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<PageLayout pageTitle="Posts" description="Things I've written.">
+  <section>
+    <ul>
+      {
+        posts.map((post) => (
+          <li class="flex flex-row gap-4">
+            <FormattedDate date={post.data.pubDate} />
+            <div class="flex-grow overflow-hidden truncate w-0">
+              <a href={`/posts/${post.slug}/`} class="underline">
+                {post.data.title}
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>

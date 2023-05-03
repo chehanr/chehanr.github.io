@@ -1,18 +1,16 @@
 {
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "cSpell.words": [
+    "astrojs",
+    "Chehan",
+    "chehanr",
+    "consts",
+    "fontsource",
+    "Ratnasiri",
+    "roboto",
+    "tailwindcss"
+  ],
+  "[typescript]": { "editor.formatOnSave": true },
+  "[typescriptreact]": { "editor.formatOnSave": true },
+  "[json]": { "editor.formatOnSave": true },
+  "[astro]": {"editor.formatOnSave": true}
 }

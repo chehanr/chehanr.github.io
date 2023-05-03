@@ -1,37 +1,29 @@
 {
   "name": "chehanr.github.io",
-  "private": true,
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --config .prettierrc.json . --write"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "next": "^12.2.3",
+    "@astrojs/image": "^0.16.7",
+    "@astrojs/mdx": "^0.19.0",
+    "@astrojs/react": "^2.1.2",
+    "@astrojs/rss": "^2.4.0",
+    "@astrojs/sitemap": "^1.2.2",
+    "@astrojs/tailwind": "^3.1.1",
+    "@fontsource/roboto-flex": "^4.5.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "astro": "^2.3.4",
+    "cva": "npm:class-variance-authority@^0.6.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.0.6",
-    "@types/react": "^18.0.15",
-    "@types/react-syntax-highlighter": "^15.5.3",
-    "autoprefixer": "^10.4.7",
-    "clsx": "^1.2.1",
-    "eslint": "^8.20.0",
-    "eslint-config-next": "^12.2.3",
-    "eslint-config-prettier": "^8.5.0",
-    "feed": "^4.2.2",
-    "gray-matter": "^4.0.3",
-    "postcss": "^8.4.14",
-    "prettier": "^2.7.1",
-    "react-markdown": "^8.0.3",
-    "react-syntax-highlighter": "^15.5.0",
-    "react-use": "^17.4.0",
-    "remark-gfm": "^3.0.1",
-    "tailwindcss": "^3.1.6",
-    "typescript": "^4.7.4"
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.2"
   }
 }
