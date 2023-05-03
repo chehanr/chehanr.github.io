@@ -1,5 +1,16 @@
 {
-    "cSpell.words": [
-        "tailwindcss"
-    ]
+  "cSpell.words": [
+    "astrojs",
+    "Chehan",
+    "chehanr",
+    "consts",
+    "fontsource",
+    "Ratnasiri",
+    "roboto",
+    "tailwindcss"
+  ],
+  "[typescript]": { "editor.formatOnSave": true },
+  "[typescriptreact]": { "editor.formatOnSave": true },
+  "[json]": { "editor.formatOnSave": true },
+  "[astro]": {"editor.formatOnSave": true}
 }

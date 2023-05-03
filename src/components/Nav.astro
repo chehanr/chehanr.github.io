@@ -1,0 +1,13 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+
+export type Props = {
+  pageTitle?: string;
+};
+---
+
+<nav class="flex flex-row flex-wrap gap-2 md:flex-col md:gap-0">
+  <HeaderLink href="/">About</HeaderLink>
+  <HeaderLink href="/resume">Resume</HeaderLink>
+  <HeaderLink href="/posts">Posts</HeaderLink>
+</nav>

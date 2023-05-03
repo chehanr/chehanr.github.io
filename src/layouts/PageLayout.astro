@@ -1,0 +1,36 @@
+---
+import "@fontsource/roboto-flex/variable.css";
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
+
+export type Props = {
+  pageTitle?: string;
+  description?: string;
+  image?: string;
+};
+
+const props = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en-AU">
+  <Head {...props} />
+  <body
+    class="dark:bg-neutral-900 dark:text-neutral-50 bg-neutral-50 text-neutral-900"
+  >
+    <div class="mx-auto max-w-screen-md">
+      <div class="flex flex-col gap-4 m-4">
+        <div class="flex flex-row items-center gap-4">
+          <Header pageTitle={props.pageTitle} />
+        </div>
+        <div class="flex flex-col gap-4 md:flex-row md:gap-8">
+          <Nav />
+          <main class="flex-grow">
+            <slot />
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

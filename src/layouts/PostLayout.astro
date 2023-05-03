@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+
+import FormattedDate from "../components/FormattedDate.astro";
+
+export type Props = CollectionEntry<"posts">["data"];
+
+const { pubDate, updatedDate, heroImage, heroImageAlt } = Astro.props;
+---
+
+<article class="prose dark:prose-invert -mt-8">
+  {
+    heroImage && (
+      <Picture
+        src={heroImage}
+        alt={heroImageAlt || ""}
+        widths={[400, 800, 1200]}
+        aspectRatio="16:9"
+      />
+    )
+  }
+  <slot />
+  <div>Published on <FormattedDate date={pubDate} /></div>
+  {
+    updatedDate && (
+      <div>
+        Last updated on <FormattedDate date={updatedDate} />
+      </div>
+    )
+  }
+</article>
