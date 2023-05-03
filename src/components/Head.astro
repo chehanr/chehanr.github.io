@@ -18,7 +18,7 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const title = [SITE_TITLE, ...(pageTitle ? [pageTitle] : [])].join(" | ");
+const title = pageTitle ? pageTitle : SITE_TITLE;
 ---
 
 <head>
