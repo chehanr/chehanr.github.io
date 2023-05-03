@@ -55,7 +55,8 @@ const title = [SITE_TITLE, ...(pageTitle ? [pageTitle] : [])].join(" | ");
     type="text/partytown"
     src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_TRACKING_CODE}`}
   ></script>
-  <script type="text/partytown">
+  <script type="text/partytown" define:vars={{ GOOGLE_ANALYTICS_TRACKING_CODE }}
+  >
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
