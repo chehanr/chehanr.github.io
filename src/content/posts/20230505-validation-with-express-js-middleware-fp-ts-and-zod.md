@@ -121,9 +121,7 @@ export class RequestValidationError extends Error {
 }
 ```
 
-In this section of the code, we have created three utility functions - `validateRequestBody`, `validateRequestQueries`, and `validateRequestParams` - that wrap around the `validateRequest` middleware for ease of use and better type safety.
-
-These functions are a way to abstract away the implementation details of the `validateRequest` middleware, making it easier to use and ensuring that the types of the request parameters are correctly inferred.
+In the following section of the code, we will create three utility functions - `validateRequestBody`, `validateRequestQueries`, and `validateRequestParams` - that wrap around the `validateRequest` middleware:
 
 ```ts
 // ./src/middleware.ts
@@ -150,6 +148,8 @@ export const validateRequestParams = <T extends ParamsDictionary>(
   validateRequest({ requestContentLocation: "params", zodType });
 
 ```
+
+These functions are a way to abstract away the implementation details of the `validateRequest` middleware, making it easier to use and ensuring that the types of the request parameters are correctly inferred.
 
 Now let's create an endpoint to test all these out:
 
@@ -352,7 +352,7 @@ The `transformToAPIFailureResponse` middleware will be "invoked" whenever the `n
 
 This middleware will look at the `err` parameter and matches it against a list of `Error` classes that we know of. Here we are doing that against the previously created `RequestValidationError` error. Then, thanks to `instanceof` and type guards, we are able to extract properties from the error and map them to a JSON response and send it down with the correct status code.
 
-It is important to register this middleware after your routes to get it working.
+It is important to register this middleware after your routes to get it working:
 
 ```ts
 // ./src/index.ts
