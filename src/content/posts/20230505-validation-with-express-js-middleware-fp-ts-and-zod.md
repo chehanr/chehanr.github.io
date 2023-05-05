@@ -8,7 +8,7 @@ heroImageAlt: "A cyberpunk (express) train (AI Art)"
 
 # Validation with Express.js middleware, fp-ts and Zod
 
-This post is about setting up Express.js middleware to validate data in the request body, URL parameters, or query parameters using [fp-ts](https://gcanti.github.io/fp-ts/) and [Zod](https://zod.dev/).
+This post is about setting up [Express.js](https://expressjs.com/) middleware to validate data in the request body, URL parameters, or query parameters using [fp-ts](https://gcanti.github.io/fp-ts/) and [Zod](https://zod.dev/).
 
 There are multiple ways to approach this, and this is one of them.
 
