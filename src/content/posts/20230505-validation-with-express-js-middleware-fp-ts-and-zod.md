@@ -8,7 +8,7 @@ heroImageAlt: "A cyberpunk (express) train (AI Art)"
 
 # Validation with Express.js middleware, fp-ts and Zod
 
-This post is about setting up Express.js middleware to validate data in the request body, URL parameters, or query parameters using fp-ts and Zod.
+This post is about setting up Express.js middleware to validate data in the request body, URL parameters, or query parameters using [fp-ts](https://gcanti.github.io/fp-ts/) and [Zod](https://zod.dev/).
 
 There are multiple ways to approach this, and this is one of them.
 
@@ -35,7 +35,7 @@ export const parseZ =
   };
 ```
 
-We'll be using fp-ts today but we'll keep it at a minimum and mainly use the `Either` monad.
+We'll be using fp-ts today but we'll keep it at a minimum and mainly use the [Either](https://gcanti.github.io/fp-ts/modules/Either.ts.html) monad.
 
 __What is the Either monad?__
 
@@ -86,7 +86,7 @@ export const validateRequest =
 
 The `validateRequest` middleware takes in a `requestContentLocation` parameter which we use to specify where the Zod parser should be run on. We can choose to validate data in the request body, URL parameters, or query parameters.
 
-The result of `requestContentParser` function is then passed into the `fold` function available in the `Either` monad to pass that result into the next middleware using the `next` function.
+The result of `requestContentParser` function is then passed into the [fold](https://gcanti.github.io/fp-ts/modules/Either.ts.html#fold) function available in the `Either` monad to pass that result into the next middleware using the `next` function.
 
 __What is the `fold` function?__
 
