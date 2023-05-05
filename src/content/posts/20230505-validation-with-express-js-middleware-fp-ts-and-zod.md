@@ -121,7 +121,7 @@ export class RequestValidationError extends Error {
 }
 ```
 
-In the following section of the code, we will create three utility functions - `validateRequestBody`, `validateRequestQueries`, and `validateRequestParams` - that wrap around the `validateRequest` middleware:
+In the following section of the code, we will create three additional functions - `validateRequestBody`, `validateRequestQueries`, and `validateRequestParams` - that wrap around the `validateRequest` middleware:
 
 ```ts
 // ./src/middleware.ts
