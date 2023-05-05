@@ -1,7 +1,7 @@
 ---
 title: "Validation with Express.js middleware, fp-ts and Zod"
 description: "This post explores how to use Express.js middleware for validating data in the request body, URL parameters, or query parameters using fp-ts and Zod. The post also covers the Either monad and how to use the fold function for error handling."
-pubDate: "May 06 2023"
+pubDate: "May 05 2023"
 heroImage: "/posts/validation-with-express-js-middleware-fp-ts-and-zod/cyberpunk-train.png"
 heroImageAlt: "A cyberpunk (express) train (AI Art)"
 ---
