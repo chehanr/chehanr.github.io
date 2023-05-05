@@ -180,8 +180,6 @@ export type ExampleAPIResponseBody = APIResponseBodySuccessful<{
   queries: Record<string, unknown>;
   body: Record<string, unknown>;
   params: Record<string, unknown>;
-  requestContext: Record<string, unknown>;
-  responseContext: Record<string, unknown>;
 }>;
 
 ```
@@ -209,9 +207,7 @@ export const exampleController: RequestHandler<
     result: {
       queries: req.query,
       body: req.body || {},
-      params: req.params,
-      requestContext: req.context,
-      responseContext: res.context,
+      params: req.params
     },
     error: null,
   });
