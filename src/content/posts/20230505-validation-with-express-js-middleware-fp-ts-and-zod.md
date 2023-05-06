@@ -177,9 +177,9 @@ export const ExampleRequestParamsZ = z.object({ baz: z.string().optional() });
 export type ExampleRequestParams = z.infer<typeof ExampleRequestParamsZ>;
 
 export type ExampleAPIResponseBody = APIResponseBodySuccessful<{
-  queries: Record<string, unknown>;
-  body: Record<string, unknown>;
-  params: Record<string, unknown>;
+  queries: ExampleRequestQueries;
+  body: ExampleRequestBody;
+  params: ExampleRequestParams;
 }>;
 
 ```
@@ -206,7 +206,7 @@ export const exampleController: RequestHandler<
     success: true,
     result: {
       queries: req.query,
-      body: req.body || {},
+      body: req.body,
       params: req.params
     },
     error: null,
