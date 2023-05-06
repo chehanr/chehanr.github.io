@@ -33,6 +33,8 @@ const props = Astro.props;
 
     <script is:inline>
       // https://www.kevinzunigacuellar.com/blog/dark-mode-in-astro/
+      // TODO: Figure out how to use `THEME` from `consts.ts`.
+
       const theme = (() => {
         if (
           typeof localStorage !== "undefined" &&
