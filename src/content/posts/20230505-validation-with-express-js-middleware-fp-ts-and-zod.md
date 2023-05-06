@@ -394,4 +394,4 @@ That's it!
 
 I believe this approach is highly extensible. Meaning it's very easy handle future error cases, especially when there's multiple endpoints to maintain.
 
-The code for this is available [here](https://github.com/chehanr/express-boilerplate).
+The code for this is available on [github.com/chehanr/express-boilerplate](https://github.com/chehanr/express-boilerplate).
