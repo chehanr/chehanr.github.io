@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import type { FC } from "react";
 
+import type { Theme } from "../types";
+
 // https://tabler-icons.io/static/tabler-icons/icons/sun.svg
 export const SunIcon = () => {
   return (
@@ -44,7 +46,16 @@ export const MoonIcon = () => {
 
 // https://www.kevinzunigacuellar.com/blog/dark-mode-in-astro/
 export const ThemeSwitch: FC = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+  const getTheme = (): Theme => {
+    const v = localStorage.getItem("theme");
+
+    // Parse it instead?
+    if (v === "light") return "light";
+
+    return "dark";
+  };
+
+  const [theme, setTheme] = useState<Theme>(getTheme());
 
   const handleClick = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -61,7 +72,11 @@ export const ThemeSwitch: FC = () => {
   }, [theme]);
 
   return (
-    <button onClick={handleClick} aria-label="Switch theme">
+    <button
+      onClick={handleClick}
+      aria-label="Switch theme"
+      className="transition duration-300 ease-in-out"
+    >
       {theme === "light" ? <MoonIcon /> : <SunIcon />}
     </button>
   );
