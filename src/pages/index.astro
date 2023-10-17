@@ -1,7 +1,15 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { getCollection } from "astro:content";
 
 import PageLayout from "../layouts/PageLayout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const RECENT_POST_COUNT = 5;
+
+const posts = (await getCollection("posts"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, RECENT_POST_COUNT);
 ---
 
 <PageLayout description={"Chehan Ratnasiri's personal webspace."}>
@@ -66,5 +74,24 @@ import PageLayout from "../layouts/PageLayout.astro";
         </li>
       </ul>
     </p>
+
+    <div class="mt-6 text-sm">
+      <p class="text-2xl">Recent posts</p>
+
+      <ul class="mt-4">
+        {
+          posts.map((post) => (
+            <li class="flex flex-row gap-4">
+              <FormattedDate date={post.data.pubDate} />
+              <div class="flex-grow overflow-hidden truncate w-0">
+                <a href={`/posts/${post.slug}/`} class="underline">
+                  {post.data.title}
+                </a>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </section>
 </PageLayout>
