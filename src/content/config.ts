@@ -16,6 +16,7 @@ const posts = defineCollection({
       .transform((str) => (str ? new Date(str) : undefined)),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
+    isUnlisted: z.boolean().optional(),
   }),
 });
 

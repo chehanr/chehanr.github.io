@@ -4,26 +4,30 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
 
-const posts = (await getCollection("posts")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (await getCollection("posts"))
+  .filter((v) => !v.data.isUnlisted)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <PageLayout pageTitle="Posts" description="Things I've written.">
   <section>
-    <ul>
-      {
-        posts.map((post) => (
-          <li class="flex flex-row gap-4">
-            <FormattedDate date={post.data.pubDate} />
-            <div class="flex-grow overflow-hidden truncate w-0">
-              <a href={`/posts/${post.slug}/`} class="underline">
-                {post.data.title}
-              </a>
-            </div>
-          </li>
-        ))
-      }
-    </ul>
+    {
+      posts.length > 0 ? (
+        <ul>
+          {posts.map((post) => (
+            <li class="flex flex-row gap-4">
+              <FormattedDate date={post.data.pubDate} />
+              <div class="flex-grow overflow-hidden truncate w-0">
+                <a href={`/posts/${post.slug}/`} class="underline">
+                  {post.data.title}
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No posts yet.</p>
+      )
+    }
   </section>
 </PageLayout>
