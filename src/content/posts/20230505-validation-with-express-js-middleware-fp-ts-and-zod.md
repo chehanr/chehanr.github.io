@@ -5,6 +5,7 @@ pubDate: "May 05 2023"
 updatedDate: "May 06 2023"
 heroImage: "/posts/validation-with-express-js-middleware-fp-ts-and-zod/cyberpunk-train.png"
 heroImageAlt: "A cyberpunk (express) train (AI Art)"
+isUnlisted: true
 ---
 
 This post is about setting up [Express.js](https://expressjs.com/) middleware to validate data in the request body, URL parameters, or query parameters using [fp-ts](https://gcanti.github.io/fp-ts/) and [Zod](https://zod.dev/).
