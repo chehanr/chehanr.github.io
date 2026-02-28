@@ -14,7 +14,7 @@
     "@astrojs/mdx": "^0.19.0",
     "@astrojs/partytown": "^1.2.0",
     "@astrojs/react": "^2.1.2",
-    "@astrojs/rss": "^2.4.0",
+    "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.1",
     "@fontsource/roboto-flex": "^4.5.5",
