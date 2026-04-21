@@ -1,10 +1,9 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
-import image from "@astrojs/image";
 import partytown from "@astrojs/partytown";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,13 +11,24 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    tailwind(),
     react(),
-    image(),
     partytown({
       config: {
         forward: ["dataLayer.push"],
       },
     }),
+  ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  image: {
+    domains: ["www.gravatar.com"],
+  },
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "Roboto Flex",
+      cssVariable: "--font-roboto-flex",
+    },
   ],
 });

@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { Picture } from "@astrojs/image/components";
 
 import FormattedDate from "../components/FormattedDate.astro";
 
@@ -10,14 +9,13 @@ const { title, pubDate, updatedDate, heroImage, heroImageAlt } = Astro.props;
 ---
 
 <article class="flex flex-col gap-4">
-  <div class="prose dark:prose-invert -mt-8">
+  <div class="prose dark:prose-invert">
     {
       heroImage && (
-        <Picture
+        <img
           src={heroImage}
           alt={heroImageAlt || ""}
-          widths={[400, 800, 1200]}
-          aspectRatio="16:9"
+          class="max-w-full h-auto"
         />
       )
     }

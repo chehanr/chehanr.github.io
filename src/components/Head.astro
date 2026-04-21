@@ -1,7 +1,6 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import { Font } from "astro:assets";
 import { SITE_TITLE, GOOGLE_TAG_MEASUREMENT_ID } from "../consts";
 
 export type Props = {
@@ -42,6 +41,7 @@ const title = pageTitle ? pageTitle : SITE_TITLE;
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
+  <Font cssVariable="--font-roboto-flex" preload />
 
   <!-- Canonical URL -->
   <link rel="canonical" href={canonicalURL} />
