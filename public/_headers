@@ -4,5 +4,8 @@
   X-Frame-Options: DENY
 
 /
+  Link: </robots.txt>; rel="robots"
   Link: </sitemap-index.xml>; rel="sitemap"
-  Content-Signal: ai-train=no, search=yes, ai-input=no
+  Link: <https://github.com/chehanr>; rel="author"
+  Link: </rss.xml>; rel="alternate"; type="application/rss+xml"
+  Content-Signal: ai-train=yes, search=yes, ai-input=yes
