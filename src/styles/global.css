@@ -4,5 +4,5 @@
 @variant dark (&:where(.dark, .dark *));
 
 body {
-  font-family: "roboto-flex", sans-serif;
+  font-family: var(--font-roboto-flex), sans-serif;
 }

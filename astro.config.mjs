@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
@@ -24,4 +24,11 @@ export default defineConfig({
   image: {
     domains: ["www.gravatar.com"],
   },
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "Roboto Flex",
+      cssVariable: "--font-roboto-flex",
+    },
+  ],
 });
