@@ -65,7 +65,7 @@ const title = pageTitle ? pageTitle : SITE_TITLE;
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={image && new URL(image, Astro.url)} />
 
-  <script is:inline>
+  <script is:inline data-cfasync="false">
     (function() {
       var theme = localStorage.getItem("theme");
       if (!theme) {
