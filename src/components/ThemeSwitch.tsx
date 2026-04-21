@@ -46,20 +46,18 @@ export const MoonIcon = () => {
 
 // https://www.kevinzunigacuellar.com/blog/dark-mode-in-astro/
 export const ThemeSwitch: FC = () => {
-  const getTheme = (): Theme => {
-    const v = localStorage.getItem("theme");
-
-    // Parse it instead?
-    if (v === "light") return "light";
-
-    return "dark";
-  };
-
-  const [theme, setTheme] = useState<Theme>(getTheme());
+  const [theme, setTheme] = useState<Theme>("dark");
 
   const handleClick = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") {
+      setTheme(stored);
+    }
+  }, []);
 
   useEffect(() => {
     if (theme === "dark") {

@@ -18,7 +18,7 @@ const posts = (await getCollection("posts"))
             <li class="flex flex-row gap-4">
               <FormattedDate date={post.data.pubDate} />
               <div class="flex-grow overflow-hidden truncate w-0">
-                <a href={`/posts/${post.slug}/`} class="underline">
+                <a href={`/posts/${post.id}/`} class="underline">
                   {post.data.title}
                 </a>
               </div>
