@@ -3,6 +3,9 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
 
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
 /
   Link: </robots.txt>; rel="robots"
   Link: </sitemap-index.xml>; rel="sitemap"
