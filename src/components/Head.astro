@@ -64,4 +64,17 @@ const title = pageTitle ? pageTitle : SITE_TITLE;
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={image && new URL(image, Astro.url)} />
+
+  <script is:inline>
+    (function() {
+      var theme = localStorage.getItem("theme");
+      if (!theme) {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        localStorage.setItem("theme", theme);
+      }
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
 </head>
